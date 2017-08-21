@@ -1,0 +1,25 @@
+﻿using Net4Frm.Model;
+using Net4Frm.Model.Extension;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Net4Frm.ServiceInterface
+{
+    public interface IOperationSysDatUser
+    {
+        Ptcp<ModelBase> InsertSysDatUserInfo(N4_SysDatUser datUser);
+        Ptcp<ModelBase> UpdateSysDatUserInfo(N4_SysDatUser datUser);
+<<<<<<< HEAD
+        IEnumerable<N4_SysDatUser> SearchSysDatUsers(N4_SysDatUser datUser);
+        IEnumerable<tmp_N4_logToUserLoginout> SearchUserLoginOut(tmp_N4_logToUserLoginout login, int pageSize, int pageIndex, out long total);
+        IEnumerable<tmp_N4_logToUserOperation> SearchUserOperation(tmp_N4_logToUserOperation operation, int pageSize, int pageIndex, out long total);
+=======
+        IEnumerable<N4_SysDatUser> QueryUsers(PageQueryInput pagerInfo, N4_SysDatUser query_entity);
+        N4_SysDatUser QueryUserByUniqueid(String uniqueid);
+        Ptcp<UserLoginRes> LogIn(String user_name, string pwd);
+        Ptcp<ModelBase> RemoveUser(String uniqueid);
+>>>>>>> fedf50e083014395fe0ce79278d57313faf50054
+    }
+}
